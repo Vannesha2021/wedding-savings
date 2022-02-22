@@ -17,14 +17,64 @@ def get_month_data():
 
     """
     Get month from the user.
+    Run a while loop to collect the valid month from the user via the terminal,
+    which must be from month 1 to 12. The loop will repeatedly request a valid
+    data until the data collected is correct.
+    """
+
+    while True:
+        print("Welcome to Wedding Savings Planner.\n"),
+        print("Please state the month in terms of a number"),
+        print("You may choose from 1 to 12.\n"),
+        print("Example: If it is February, you should state 2\n")
+
+        month = input("Enter the month here:\n")
+        if validate_data(month):
+            print("Month has been noted, thank you.\n")
+            show_alldata_month1(month)
+            break
+
+
+def validate_data(values):
 
     """
-    print("Welcome to Wedding Savings Planner.\n")
-    print("Please state the month in terms of a number"),
-    print("You may choose from 1 to 12.\n"),
-    print("Example: If it is February, you should state 2\n")
+    Raises ValueError if the month
+    selected is not a valid number or not an integer.
+    """
 
-    month = input("Enter the month here:\n")
+    try:
+        if int(values) <= 0:
+
+            raise ValueError
+            f'{"You may only choose from month 1 to 12"}'
+
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+        return False
+    try:
+        if int(values) > 12:
+
+            raise ValueError
+            f'{"You may only choose from month 1 to 12"}'
+
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+        return False
+
+    return True
+
+
+def show_alldata_month1(month):
+
+    """
+    Projects expenses,savings and balance for
+    January
+    """
+    if month == "1":
+        alldata_m1_1 = SHEET.worksheet("all_data").get('A1')[0][0]
+        print(("The month you have chosen : "), alldata_m1_1)
+    
+    return month
 
 
 def main():
