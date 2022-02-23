@@ -67,13 +67,28 @@ def validate_data(values):
 def show_alldata_month1(month):
 
     """
-    Projects expenses,savings and balance for
+    Projects the chosen month, expenses, and savings for
     January
     """
+    print("Retrieving data...\n")
+
     if month == "1":
         alldata_m1_1 = SHEET.worksheet("all_data").get('A1')[0][0]
+        alldata_m1_2 = SHEET.worksheet("all_data").get('B2')[0][0]
         print(("The month you have chosen : "), alldata_m1_1)
-    
+
+        alldata_m1_3 = SHEET.worksheet("all_data").get('B3')[0][0]
+        print(("Your expenses for this month will be:"), alldata_m1_2)
+        
+        print("\n")
+        print("Retrieving savings data...\n")
+
+        jan = int(alldata_m1_3)
+        print(("Your savings for this month will be:"), jan)
+
+        jan = int(alldata_m1_3) - int(alldata_m1_2)
+        print(("Your savings after expenses will be:"), jan)
+
     return month
 
 
