@@ -33,6 +33,7 @@ def get_month_data():
             print("Month has been noted, thank you.\n")
             show_alldata_month1(month)
             show_alldata_month2(month)
+            show_alldata_month3(month)
             break
 
 
@@ -129,6 +130,45 @@ def show_alldata_month2(month):
         alldata_m1_4 = SHEET.worksheet("all_data").get('B3')[0][0]
         feb_ts = int(alldata_m1_3) + int(alldata_m1_4)
         print(("Your total savings before expenses year to date is:"), feb_ts)
+
+    return month
+
+
+def show_alldata_month3(month):
+
+    """
+    Projects expenses,savings and balance for
+    March
+    """
+
+    if month == "3":
+        alldata_m1_1 = SHEET.worksheet("all_data").get('A9')[0][0]
+        print(("The month you have chosen :"), alldata_m1_1)
+
+        alldata_m1_2 = SHEET.worksheet("all_data").get('B10')[0][0]
+        print(("Your expenses for this month will be:"), alldata_m1_2)
+
+        alldata_m1_3 = SHEET.worksheet("all_data").get('B11')[0][0]
+        print("\n")
+        print("Retrieving savings data...\n")
+
+        mar = int(alldata_m1_3)
+        print(("Your savings for this month will be:"), mar)
+
+        """
+        Projects savings after deduction of expenses
+        """
+        mar = int(alldata_m1_3) - int(alldata_m1_2)
+        print(("Your savings after expenses will be:"), mar)
+
+        """
+        Projects overall savings for past and present month/s 
+        before deduction of all monthly expenses
+        """
+        alldata_m1_4 = SHEET.worksheet("all_data").get('B3')[0][0]
+        alldata_m1_5 = SHEET.worksheet("all_data").get('B7')[0][0]
+        mar_ts = int(alldata_m1_3) + int(alldata_m1_4) + int(alldata_m1_5)
+        print(("Your total savings before expenses year to date is:"), mar_ts)
 
     return month
 
