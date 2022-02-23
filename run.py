@@ -32,6 +32,7 @@ def get_month_data():
         if validate_data(month):
             print("Month has been noted, thank you.\n")
             show_alldata_month1(month)
+            show_alldata_month2(month)
             break
 
 
@@ -88,6 +89,46 @@ def show_alldata_month1(month):
 
         jan = int(alldata_m1_3) - int(alldata_m1_2)
         print(("Your savings after expenses will be:"), jan)
+
+    return month
+
+
+def show_alldata_month2(month):
+
+    """
+    Projects expenses,savings and balance for
+    February
+    """
+
+    if month == "2":
+        alldata_m1_1 = SHEET.worksheet("all_data").get('A5')[0][0]
+        print(("The month you have chosen :"), alldata_m1_1)
+
+        alldata_m1_2 = SHEET.worksheet("all_data").get('B6')[0][0]
+        print(("Your expenses for this month will be:"), alldata_m1_2)
+        
+        alldata_m1_3 = SHEET.worksheet("all_data").get('B7')[0][0]
+        print("\n")
+        print("Retrieving total savings...\n")
+
+        feb = int(alldata_m1_3)
+        print(("Your savings for this month will be:"), feb)
+    
+        """
+        Projects savings after deduction of expenses
+        """
+
+        feb = int(alldata_m1_3) - int(alldata_m1_2)
+        print(("Your savings after expenses will be:"), feb)
+
+        """
+        Projects overall savings for past and present month/s 
+        before deduction of all monthly expenses
+        """
+
+        alldata_m1_4 = SHEET.worksheet("all_data").get('B3')[0][0]
+        feb_ts = int(alldata_m1_3) + int(alldata_m1_4)
+        print(("Your total savings before expenses year to date is:"), feb_ts)
 
     return month
 
