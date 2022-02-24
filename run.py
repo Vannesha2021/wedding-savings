@@ -40,6 +40,7 @@ def get_month_data():
             show_alldata_month7(month)
             show_alldata_month8(month)
             show_alldata_month9(month)
+            show_alldata_month10(month)
             break
 
 
@@ -466,6 +467,60 @@ def show_alldata_month9(month):
         print(("Your total savings before expenses year to date is:"), sep_ts)
 
     return month
+
+
+def show_alldata_month10(month):
+
+    """
+    Projects expenses,savings and balance for
+    October
+    """
+
+    if month == "10":
+        alldata_m1_1 = SHEET.worksheet("all_data").get('A37')[0][0]
+        print(("The month you have chosen :"), alldata_m1_1)
+
+        alldata_m1_2 = SHEET.worksheet("all_data").get('B38')[0][0]
+        print(("Your expenses for this month will be:"), alldata_m1_2)
+
+        alldata_m1_3 = SHEET.worksheet("all_data").get('B39')[0][0]
+        print("\n")
+        print("Retrieving savings data...\n")
+
+        oct = int(alldata_m1_3)
+        print(("Your savings for this month will be:"), oct)
+
+        """
+        Projects savings after deduction of expenses
+        """
+        oct = int(alldata_m1_3) - int(alldata_m1_2)
+        print(("Your savings after expenses will be:"), oct)
+
+        print("\n")
+        print("Retrieving total savings...\n")
+
+        """
+        Projects overall savings for past and present month/s 
+        before deduction of all monthly expenses
+        """
+        alldata_m1_4 = SHEET.worksheet("all_data").get('B3')[0][0]
+        alldata_m1_5 = SHEET.worksheet("all_data").get('B7')[0][0]
+        alldata_m1_6 = SHEET.worksheet("all_data").get('B11')[0][0]
+        alldata_m1_7 = SHEET.worksheet("all_data").get('B15')[0][0]
+        alldata_m1_8 = SHEET.worksheet("all_data").get('B19')[0][0]
+        alldata_m1_9 = SHEET.worksheet("all_data").get('B23')[0][0]
+        alldata_m1_10 = SHEET.worksheet("all_data").get('B27')[0][0]
+        alldata_m1_11 = SHEET.worksheet("all_data").get('B27')[0][0]
+        alldata_m1_12 = SHEET.worksheet("all_data").get('B35')[0][0]
+        oct_ts = (int(alldata_m1_3) + int(alldata_m1_4) + int(alldata_m1_5) +
+                  int(alldata_m1_6) + int(alldata_m1_7) +
+                  int(alldata_m1_8) + int(alldata_m1_9) +
+                  int(alldata_m1_10) + int(alldata_m1_11) +
+                  int(alldata_m1_12))
+        print(("Your total savings before expenses year to date is:"), oct_ts)
+
+    return month
+
 
 
 def main():
