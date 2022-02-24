@@ -85,17 +85,21 @@ def show_alldata_month1(month):
 
     if month == "1":
         alldata_m1_1 = SHEET.worksheet("all_data").get('A1')[0][0]
-        alldata_m1_2 = SHEET.worksheet("all_data").get('B2')[0][0]
         print(("The month you have chosen : "), alldata_m1_1)
 
-        alldata_m1_3 = SHEET.worksheet("all_data").get('B3')[0][0]
+        alldata_m1_2 = SHEET.worksheet("all_data").get('B2')[0][0]
         print(("Your expenses for this month will be:"), alldata_m1_2)
-        
+
+        alldata_m1_3 = SHEET.worksheet("all_data").get('B3')[0][0]
         print("\n")
         print("Retrieving savings data...\n")
 
         jan = int(alldata_m1_3)
         print(("Your savings for this month will be:"), jan)
+
+        """
+        Projects savings after deduction of expenses
+        """
 
         jan = int(alldata_m1_3) - int(alldata_m1_2)
         print(("Your savings after expenses will be:"), jan)
@@ -119,7 +123,7 @@ def show_alldata_month2(month):
         
         alldata_m1_3 = SHEET.worksheet("all_data").get('B7')[0][0]
         print("\n")
-        print("Retrieving total savings...\n")
+        print("Retrieving savings data...\n")
 
         feb = int(alldata_m1_3)
         print(("Your savings for this month will be:"), feb)
@@ -130,6 +134,9 @@ def show_alldata_month2(month):
 
         feb = int(alldata_m1_3) - int(alldata_m1_2)
         print(("Your savings after expenses will be:"), feb)
+
+        print("\n")
+        print("Retrieving total savings...\n")
 
         """
         Projects overall savings for past and present month/s 
@@ -170,6 +177,9 @@ def show_alldata_month3(month):
         mar = int(alldata_m1_3) - int(alldata_m1_2)
         print(("Your savings after expenses will be:"), mar)
 
+        print("\n")
+        print("Retrieving total savings...\n")
+
         """
         Projects overall savings for past and present month/s 
         before deduction of all monthly expenses
@@ -208,6 +218,9 @@ def show_alldata_month4(month):
         """
         apr = int(alldata_m1_3) - int(alldata_m1_2)
         print(("Your savings after expenses will be:"), apr)
+
+        print("\n")
+        print("Retrieving total savings...\n")
 
         """
         Projects overall savings for past and present month/s 
