@@ -38,6 +38,7 @@ def get_month_data():
             show_alldata_month5(month)
             show_alldata_month6(month)
             show_alldata_month7(month)
+            show_alldata_month8(month)
             break
 
 
@@ -359,6 +360,57 @@ def show_alldata_month7(month):
                   int(alldata_m1_6) + int(alldata_m1_7) + int(alldata_m1_8) +
                   int(alldata_m1_9))
         print(("Your total savings before expenses year to date is:"), jul_ts)
+
+    return month
+
+
+def show_alldata_month8(month):
+
+    """
+    Projects expenses,savings and balance for
+    August
+    """
+
+    if month == "8":
+        alldata_m1_1 = SHEET.worksheet("all_data").get('A29')[0][0]
+        print(("The month you have chosen :"), alldata_m1_1)
+
+        alldata_m1_2 = SHEET.worksheet("all_data").get('B30')[0][0]
+        print(("Your expenses for this month will be:"), alldata_m1_2)
+
+        alldata_m1_3 = SHEET.worksheet("all_data").get('B31')[0][0]
+        print("\n")
+        print("Retrieving savings data...\n")
+
+        aug = int(alldata_m1_3)
+        print(("Your savings for this month will be:"), aug)
+
+        """
+        Projects savings after deduction of expenses
+        """
+
+        aug = int(alldata_m1_3) - int(alldata_m1_2)
+        print(("Your savings after expenses will be:"), aug)
+
+        print("\n")
+        print("Retrieving total savings...\n")
+
+        """
+        Projects overall savings for past and present month/s 
+        before deduction of all monthly expenses
+        """
+
+        alldata_m1_4 = SHEET.worksheet("all_data").get('B3')[0][0]
+        alldata_m1_5 = SHEET.worksheet("all_data").get('B7')[0][0]
+        alldata_m1_6 = SHEET.worksheet("all_data").get('B11')[0][0]
+        alldata_m1_7 = SHEET.worksheet("all_data").get('B15')[0][0]
+        alldata_m1_8 = SHEET.worksheet("all_data").get('B19')[0][0]
+        alldata_m1_9 = SHEET.worksheet("all_data").get('B23')[0][0]
+        alldata_m1_10 = SHEET.worksheet("all_data").get('B27')[0][0]
+        aug_ts = (int(alldata_m1_3) + int(alldata_m1_4) + int(alldata_m1_5) +
+                  int(alldata_m1_6) + int(alldata_m1_7) + int(alldata_m1_8) +
+                  int(alldata_m1_9) + int(alldata_m1_10))
+        print(("Your total savings before expenses year to date is:"), aug_ts)
 
     return month
 
