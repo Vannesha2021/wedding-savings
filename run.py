@@ -28,7 +28,6 @@ def get_month_data():
         print("You may choose from 1 to 12.\n"),
         print("Example: If it is February, you should state 2\n")
 
-
         month = input("Enter the month here:\n")
         if validate_data(month):
             print("Month has been noted, thank you.\n")
