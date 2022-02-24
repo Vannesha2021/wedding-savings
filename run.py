@@ -120,14 +120,14 @@ def show_alldata_month2(month):
 
         alldata_m1_2 = SHEET.worksheet("all_data").get('B6')[0][0]
         print(("Your expenses for this month will be:"), alldata_m1_2)
-        
+
         alldata_m1_3 = SHEET.worksheet("all_data").get('B7')[0][0]
         print("\n")
         print("Retrieving savings data...\n")
 
         feb = int(alldata_m1_3)
         print(("Your savings for this month will be:"), feb)
-    
+
         """
         Projects savings after deduction of expenses
         """
@@ -139,7 +139,7 @@ def show_alldata_month2(month):
         print("Retrieving total savings...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
 
@@ -181,7 +181,7 @@ def show_alldata_month3(month):
         print("Retrieving total savings...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
         alldata_m1_4 = SHEET.worksheet("all_data").get('B3')[0][0]
@@ -223,7 +223,7 @@ def show_alldata_month4(month):
         print("Retrieving total savings...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
 
@@ -257,7 +257,7 @@ def show_alldata_month5(month):
 
         may = int(alldata_m1_3)
         print(("Your savings for this month will be:"), may)
-        
+
         """
         Projects savings after deduction of expenses
         """
@@ -268,7 +268,7 @@ def show_alldata_month5(month):
         print("Retrieving total savings data...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
 
@@ -303,7 +303,7 @@ def show_alldata_month6(month):
 
         jun = int(alldata_m1_3)
         print(("Your savings for this month will be:"), jun)
-    
+
         """
         Projects savings after deduction of expenses
         """
@@ -314,10 +314,10 @@ def show_alldata_month6(month):
         print("Retrieving total savings data...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
-        
+
         alldata_m1_4 = SHEET.worksheet("all_data").get('B3')[0][0]
         alldata_m1_5 = SHEET.worksheet("all_data").get('B7')[0][0]
         alldata_m1_6 = SHEET.worksheet("all_data").get('B11')[0][0]
@@ -363,7 +363,7 @@ def show_alldata_month7(month):
         print("Retrieving total savings data...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
 
@@ -413,7 +413,7 @@ def show_alldata_month8(month):
         print("Retrieving total savings...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
 
@@ -463,7 +463,7 @@ def show_alldata_month9(month):
         print("Retrieving total savings...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
 
@@ -515,7 +515,7 @@ def show_alldata_month10(month):
         print("Retrieving total savings...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
         alldata_m1_4 = SHEET.worksheet("all_data").get('B3')[0][0]
@@ -569,7 +569,7 @@ def show_alldata_month11(month):
         print("Retrieving total savings...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
 
@@ -626,7 +626,7 @@ def show_alldata_month12(month):
         print("Retrieving total savings...\n")
 
         """
-        Projects overall savings for past and present month/s 
+        Projects overall savings for past and present month/s
         before deduction of all monthly expenses
         """
 
