@@ -104,10 +104,7 @@ The PEP8 Validator was used to validate the code of the project to ensure there 
 [PEP Online Validator-](http://pep8online.com/)
 
 <br>
-
 Result : "All Right"
-
-![this is an image](images/PEP8 Validator.JPG)
 
 In addition to that, I was also using the console to ensure that there were no errors in the whole duration of the project.
 
